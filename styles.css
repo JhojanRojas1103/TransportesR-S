@@ -5,7 +5,53 @@
 :root{--navy:#071b35;--navy-2:#0b2b50;--blue:#1264a3;--sky:#4da3dc;--pale:#eaf4fb;--ink:#14243a;--muted:#69788a;--white:#fff;--line:#dce5ed;--font:'DM Sans',sans-serif;--display:'Manrope',sans-serif;--shadow:0 22px 60px rgba(7,27,53,.12)}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:88px}body{margin:0;font-family:var(--font);color:var(--ink);background:#fff}body.no-scroll{overflow:hidden}img{display:block;max-width:100%}a{color:inherit;text-decoration:none}button,input,textarea,select{font:inherit}button{cursor:pointer}.container{width:min(1180px,calc(100% - 48px));margin:auto}.section{padding:112px 0}.eyebrow{display:flex;align-items:center;gap:10px;color:var(--blue);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase}.eyebrow>span{width:25px;height:2px;background:var(--sky)}.eyebrow.light{color:#c7e6ff}.eyebrow.light>span{background:#73c2f6}h1,h2,h3,h4,p{margin-top:0}h1,h2,h3{font-family:var(--display)}h2{font-size:clamp(38px,5vw,58px);line-height:1.08;letter-spacing:-2.8px;margin:20px 0}h2 em,h1 em{font-style:normal;color:var(--sky)}.section-heading{max-width:650px;margin-bottom:52px}.section-heading.centered{text-align:center;margin:0 auto 58px}.section-heading.centered .eyebrow{justify-content:center}.section-heading>p,.about-top>p,.fleet-heading>p{color:var(--muted);font-size:15px;line-height:1.8;max-width:580px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:20px;padding:15px 21px;border:1px solid transparent;font-size:12px;font-weight:700;letter-spacing:.1px;transition:.25s ease}.btn span{font-size:17px;transition:transform .25s}.btn:hover span{transform:translate(3px,-3px)}.btn-primary{background:var(--sky);color:#061b32}.btn-primary:hover{background:#83cafa;transform:translateY(-3px);box-shadow:0 12px 25px #4da3dc44}.btn-glass{border-color:#ffffff80;color:white;background:#ffffff0b;backdrop-filter:blur(8px)}.btn-glass:hover{background:#fff;color:var(--navy)}.btn-white{background:#fff;color:var(--navy)}.btn-white:hover{background:#dff2ff;transform:translateY(-3px)}.btn-outline{border-color:#b7cbdc;color:var(--navy);background:transparent}.btn-outline:hover{border-color:var(--blue);background:var(--pale)}
 /* WELCOME */
-.welcome-screen{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;color:#fff;overflow:hidden;transition:opacity .85s ease,visibility .85s}.welcome-screen.is-hidden{opacity:0;visibility:hidden;pointer-events:none}.welcome-bg,.welcome-shade{position:absolute;inset:0}.welcome-bg{background:url('https://xatimg.com/image/8HDjnX9RxARq.png') center/cover;transform:scale(1.06);animation:welcomeZoom 8s ease forwards}.welcome-shade{background:linear-gradient(115deg,rgba(4,20,40,.88),rgba(5,36,65,.55),rgba(4,17,34,.65))}.welcome-content{position:relative;text-align:center;animation:rise .9s .2s both}.welcome-kicker{font-size:10px;letter-spacing:4px;color:#b6dcf5}.welcome-content h1{font-size:clamp(48px,9vw,100px);letter-spacing:3px;margin:20px 0 25px}.brand-mark{display:flex;align-items:center;gap:12px}.brand-mark-large{justify-content:center}.brand-symbol{display:grid;place-items:center;width:43px;height:43px;border:1px solid #70b9ed;color:#83cafa;font-family:var(--display);font-weight:800;font-size:15px;letter-spacing:-1px;transform:skew(-7deg)}.brand-name{font-family:var(--display);font-size:16px;letter-spacing:2px;line-height:1.2}.brand-name b{color:#77c3f4}.brand-name small{display:block;font:700 8px var(--font);letter-spacing:2.5px;margin-top:5px;color:#8da8bf}.welcome-content>p{font-size:13px;color:#d4e3ef;letter-spacing:1px;margin:25px 0}.welcome-enter{border:1px solid #ffffff80;background:#ffffff12;color:white;padding:13px 22px;font-size:11px;letter-spacing:1px}.welcome-enter span{margin-left:18px;font-size:17px}.welcome-enter:hover{background:#fff;color:var(--navy)}.welcome-bottom{position:absolute;bottom:28px;font-size:9px;letter-spacing:3px;color:#a9c7df}@keyframes rise{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:none}}@keyframes welcomeZoom{to{transform:scale(1)}}
+.welcome-screen{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;color:#fff;overflow:hidden;transition:opacity .85s ease,visibility .85s}.welcome-screen.is-hidden{opacity:0;visibility:hidden;pointer-events:none}.welcome-bg,.welcome-shade{position:absolute;inset:0}.welcome-bg {
+    position: absolute;
+    inset: 0;
+
+    background-image: url('https://xatimg.com/image/8HDjnX9RxARq.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    /* Mostrar la imagen COMPLETA */
+    background-size: contain;
+
+    /* Eliminar ampliaciones */
+    transform: none;
+    animation: none;
+
+    /* Fondo para los espacios sobrantes */
+    background-color: #071b35;
+}.welcome-shade{background:linear-gradient(115deg,rgba(4,20,40,.88),rgba(5,36,65,.55),rgba(4,17,34,.65))}.welcome-content{position:relative;text-align:center;animation:rise .9s .2s both}.welcome-kicker{font-size:10px;letter-spacing:4px;color:#b6dcf5}.welcome-content h1{font-size:clamp(48px,9vw,100px);letter-spacing:3px;margin:20px 0 25px}.brand-mark{display:flex;align-items:center;gap:12px}.brand-mark-large{justify-content:center}.brand-symbol{display:grid;place-items:center;width:43px;height:43px;border:1px solid #70b9ed;color:#83cafa;font-family:var(--display);font-weight:800;font-size:15px;letter-spacing:-1px;transform:skew(-7deg)}.brand-name{font-family:var(--display);font-size:16px;letter-spacing:2px;line-height:1.2}.brand-name b{color:#77c3f4}.brand-name small{display:block;font:700 8px var(--font);letter-spacing:2.5px;margin-top:5px;color:#8da8bf}.welcome-content>p{font-size:13px;color:#d4e3ef;letter-spacing:1px;margin:25px 0}.welcome-enter{border:1px solid #ffffff80;background:#ffffff12;color:white;padding:13px 22px;font-size:11px;letter-spacing:1px}.welcome-enter span{margin-left:18px;font-size:17px}.welcome-enter:hover{background:#fff;color:var(--navy)}.welcome-bottom{position:absolute;bottom:28px;font-size:9px;letter-spacing:3px;color:#a9c7df}@keyframes rise{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:none}}@media (min-width: 600px) and (max-width: 1023px) {
+    .welcome-bg {
+        background-size: contain;
+    }
+
+    .welcome-content h1 {
+        font-size: clamp(42px, 7vw, 75px);
+    }
+}
+
+/* CELULARES */
+@media (max-width: 599px) {
+    .welcome-bg {
+        background-size: contain;
+    }
+
+    .welcome-content h1 {
+        font-size: clamp(35px, 10vw, 55px);
+        letter-spacing: 1px;
+    }
+
+    .welcome-content {
+        padding: 15px;
+    }
+
+    .welcome-bottom {
+        font-size: 8px;
+        letter-spacing: 1.5px;
+    }
+}
 /* HEADER */
 .brand-logo {
     width: 55px;
