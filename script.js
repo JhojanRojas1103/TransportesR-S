@@ -55,10 +55,10 @@ const ABOUT = {
 
 // Catálogo editable: verifica año, capacidad y equipamiento con la flota real.
 const VEHICLES = {
-  duster: { brand:"Renault", model:"Duster", year:"2027", capacity:"4 pasajeros", image:"https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=1000&q=85", specs:["Aire acondicionado","Tracción 4x4","Equipaje: 3 maletas grandes o 4 pequeñas","Puerto de carga para celulares","Servicio premium"] },
-  hilux: { brand:"Toyota", model:"Hilux", year:"2027", capacity:"4 pasajeros", image:"https://images.unsplash.com/photo-1621993202323-f438eec934ff?auto=format&fit=crop&w=1000&q=85", specs:["Aire acondicionado","Tracción 4x4","Equipaje: 4 maletas grandes o 4 pequeñas","Puerto de carga para celulares","Platón para carga","Servicio premium"] },
-  master: { brand:"Renault", model:"Master", year:"2027", capacity:"15 pasajeros", image:"https://images.unsplash.com/photo-1566933293069-b55c7f326dd4?auto=format&fit=crop&w=1000&q=85", specs:["Aire acondicionado","Equipaje: 8 maletas grandes o 15 pequeñas","Servicio premium"] },
-  h1: { brand:"Hyundai", model:"H1", year:"2027", capacity:"7 pasajeros", image:"https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&w=1000&q=85", specs:["Aire acondicionado","Equipaje: 4 maletas grandes o 6 pequeñas"] }
+  duster: { brand:"Renault", model:"Duster", year:"2027", capacity:"4 pasajeros", image:"https://xatimg.com/image/XqQYrVjYlXHR.jpg", specs:["Aire acondicionado","Tracción 4x4","Equipaje: 3 maletas grandes o 4 pequeñas","Puerto de carga para celulares","Servicio premium"] },
+  hilux: { brand:"Toyota", model:"Hilux", year:"2027", capacity:"4 pasajeros", image:"https://xatimg.com/image/IP9hvydvCCc3.jpg", specs:["Aire acondicionado","Tracción 4x4","Equipaje: 4 maletas grandes o 4 pequeñas","Puerto de carga para celulares","Platón para carga","Servicio premium"] },
+  master: { brand:"Renault", model:"Master", year:"2027", capacity:"15 pasajeros", image:"https://xatimg.com/image/vkULhetbG4WP.jpg", specs:["Aire acondicionado","Equipaje: 8 maletas grandes o 15 pequeñas","Servicio premium"] },
+  h1: { brand:"Hyundai", model:"H1", year:"2027", capacity:"7 pasajeros", image:"https://xatimg.com/image/mza3RMBucjci.jpg", specs:["Aire acondicionado","Equipaje: 4 maletas grandes o 6 pequeñas"] }
 };
 
 const $ = (selector, parent=document) => parent.querySelector(selector);
@@ -123,7 +123,8 @@ $$(".about-tab").forEach(tab => tab.addEventListener("click", () => {
 const modal = $("#vehicleModal");
 function closeModal() { modal.classList.remove("open"); modal.setAttribute("aria-hidden","true"); document.body.classList.remove("no-scroll"); }
 $$(".vehicle-more").forEach(button => button.addEventListener("click", () => {
-  const vehicle = VEHICLES[button.dataset.vehicle]; if (!vehicle) return;
+  
+const vehicle = VEHICLES[button.dataset.vehicle]; if (!vehicle) return;
   $("#modalTitle").textContent = `${vehicle.brand} ${vehicle.model}`;
   $("#modalImage").style.backgroundImage = `url("${vehicle.image}")`;
   $("#modalSpecs").innerHTML = `<ul class="modal-specs"><li><b>Marca:</b> ${vehicle.brand}</li><li><b>Modelo:</b> ${vehicle.model}</li><li><b>Año:</b> ${vehicle.year}</li><li><b>Capacidad:</b> ${vehicle.capacity}</li>${vehicle.specs.map(s => `<li>${s}</li>`).join("")}</ul>`;
