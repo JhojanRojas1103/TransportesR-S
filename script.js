@@ -1,20 +1,135 @@
 /* =========================================================
-   RUTAS COLOMBIA — CONFIGURACIÓN Y FUNCIONALIDADES
+   TRANSPORTES SE — CONFIGURACIÓN Y FUNCIONALIDADES
    Personaliza los datos reales de la empresa en CONFIG.
    ========================================================= */
 const CONFIG = {
-  companyName: "Rutas Colombia",
+  companyName: "Transportes SE",
   nit: "[AGREGAR NIT]",
-  whatsapp: "573000000000", // Reemplazar por número real: código país + número, sin + ni espacios.
+  whatsapp: "573143868847", // Reemplazar por número real: código país + número, sin + ni espacios.
   phone: "[AGREGAR TELÉFONO]",
   email: "[AGREGAR CORREO]",
   address: "[AGREGAR DIRECCIÓN REAL]",
   city: "[CIUDAD, DEPARTAMENTO]",
-  hours: "Lunes a viernes · 8:00 a. m. – 5:00 p. m.",
+  hours: "24/7 Siempre disponibles para atenderte",
   // Escribe aquí la dirección real. Si queda vacía, el mapa seguirá como marcador.
   mapAddress: "",
   socials: { facebook: "", instagram: "", tiktok: "" }
 };
+
+
+/* =========================================================
+   CARRUSEL RESPONSIVE PROFESIONAL
+   Imágenes independientes para PC y celulares
+   ========================================================= */
+
+const heroOne = document.querySelector(".hero-image-one");
+const heroTwo = document.querySelector(".hero-image-two");
+
+const heroSlides = [
+  {
+    desktop: "https://xatimg.com/image/flFFAwu61k9W.jpg",
+    mobile: "https://xatimg.com/image/96iNsyxC85xq.jpg"
+  },
+  {
+    desktop: "https://xatimg.com/image/oAsJBAxinxgv.jpg",
+    mobile: "https://xatimg.com/image/IV18rzxCDPxf.jpg"
+  },
+  {
+    desktop: "https://xatimg.com/image/feJAx0iubfRq.jpg",
+    mobile: "https://xatimg.com/image/BUkq0sRkdshd.jpg"
+  }
+];
+
+let currentSlide = 0;
+let showingFirst = true;
+
+// Detectar si el dispositivo es móvil
+function isMobile() {
+  return window.matchMedia("(max-width: 768px)").matches;
+}
+
+// Obtener la imagen correspondiente al dispositivo
+function getHeroImage(slide) {
+  return isMobile() ? slide.mobile : slide.desktop;
+}
+
+// Precargar imágenes
+function preloadHeroImages() {
+  heroSlides.forEach(slide => {
+    [slide.desktop, slide.mobile].forEach(url => {
+      const img = new Image();
+      img.src = url;
+    });
+  });
+}
+
+// Mostrar primera imagen
+function initializeHero() {
+
+  if (!heroOne || !heroTwo || !heroSlides.length) return;
+
+  preloadHeroImages();
+
+  heroOne.style.backgroundImage =
+    `url("${getHeroImage(heroSlides[0])}")`;
+
+  heroOne.style.opacity = "1";
+  heroTwo.style.opacity = "0";
+}
+
+// Cambiar imagen del carrusel
+function changeHeroSlide() {
+
+  if (!heroOne || !heroTwo) return;
+
+  const nextSlide = (currentSlide + 1) % heroSlides.length;
+
+  const activeLayer = showingFirst ? heroOne : heroTwo;
+  const nextLayer = showingFirst ? heroTwo : heroOne;
+
+  const imageUrl = getHeroImage(heroSlides[nextSlide]);
+
+  const img = new Image();
+
+  img.onload = () => {
+
+    nextLayer.style.backgroundImage = `url("${imageUrl}")`;
+
+    nextLayer.style.opacity = "1";
+    activeLayer.style.opacity = "0";
+
+    currentSlide = nextSlide;
+    showingFirst = !showingFirst;
+
+  };
+
+  img.onerror = () => {
+    console.error("No se pudo cargar la imagen:", imageUrl);
+  };
+
+  img.src = imageUrl;
+}
+
+// Inicializar carrusel
+initializeHero();
+
+// Cambiar cada 6 segundos
+if (heroSlides.length > 1) {
+  setInterval(changeHeroSlide, 6000);
+}
+
+// Actualizar imagen al cambiar tamaño de pantalla
+window.addEventListener("resize", () => {
+
+  if (!heroOne || !heroTwo) return;
+
+  const activeLayer = showingFirst ? heroOne : heroTwo;
+
+  activeLayer.style.backgroundImage =
+    `url("${getHeroImage(heroSlides[currentSlide])}")`;
+
+});
+
 
 // Textos de Quiénes somos: editables según la información oficial de la empresa.
 const ABOUT = {
@@ -29,26 +144,34 @@ const ABOUT = {
   mision: {
     index: "02 — NUESTRA MISIÓN", title: "Mover personas con propósito.",
     paragraphs: [
-      "Ofrecer soluciones integrales de transporte especial de pasajeros, brindando servicios cómodos, seguros y oportunos mediante vehículos adecuados, conductores profesionales y atención personalizada.",
-      "Nuestro compromiso es satisfacer las necesidades de nuestros clientes, garantizando experiencias de viaje confiables y contribuyendo a la conexión entre ciudades, municipios y destinos de Colombia."
+      "Brindar un servicio de transporte de pasajeros seguro, cómodo y confiable, comprometidos con la satisfacción de nuestros clientes y el bienestar de quienes confían en nosotros. ",
+      "Trabajamos con responsabilidad, calidad humana y dedicación, buscando mejorar continuamente nuestros servicios y contribuir al desarrollo del transporte en los Llanos Orientales y en Colombia."
     ]
   },
   vision: {
     index: "03 — NUESTRA VISIÓN", title: "Crecer conectando a Colombia.",
     paragraphs: [
-      "Consolidarnos como una empresa reconocida en Colombia por la calidad, seguridad y excelencia en la prestación de servicios de transporte especial de pasajeros.",
-      "Buscamos ampliar nuestra cobertura, fortalecer nuestra flota vehicular e incorporar nuevas soluciones tecnológicas que permitan mejorar continuamente la experiencia de nuestros clientes."
+      "Proyectamos un crecimiento sostenible, fortaleciendo nuestra flota vehicular e incorporando nuevas tecnologías para llegar cada vez más lejos y ofrecer mejores experiencias de viaje ",
+      "Consolidarnos en el 2030 como una empresa llanera reconocida en el sector del transporte de pasajeros por la calidad de nuestros servicios, la confianza de nuestros clientes y el compromiso de nuestro equipo humano. "
     ]
   },
   objetivos: {
     index: "04 — NUESTROS OBJETIVOS", title: "Compromisos que guían cada recorrido.",
     objectives: [
-      "Ofrecer servicios de transporte especial con altos estándares de seguridad y comodidad.",
-      "Garantizar puntualidad y atención personalizada en cada recorrido.",
-      "Mantener una flota vehicular moderna y en excelentes condiciones.",
-      "Contar con conductores capacitados y comprometidos con el servicio.",
-      "Ampliar nuestra cobertura en diferentes ciudades y municipios de Colombia.",
-      "Construir relaciones de confianza y satisfacción con nuestros clientes."
+
+      " Ofrecer una atención amable, oportuna y personalizada, garantizando experiencias satisfactorias para nuestros pasajeros.",
+
+      "Promover condiciones de transporte seguras, responsables y confiables en cada recorrido.",
+
+      "Ampliar progresivamente nuestra flota vehicular y nuestra capacidad operativa para llegar a nuevos destinos.",
+
+      "Mejoramiento continuo: Incorporar herramientas tecnológicas, fortalecer nuestros procesos y mantener nuestros vehículos en óptimas condiciones.",
+
+      "Construir relaciones basadas en el respeto, la honestidad y la responsabilidad con nuestros pasajeros, colaboradores y aliados.",
+
+      "Sostenibilidad: Desarrollar una empresa sólida y sostenible, comprometida con el crecimiento económico, social y ambiental de nuestra región."
+      
+    
     ]
   }
 };
