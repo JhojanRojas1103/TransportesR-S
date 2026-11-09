@@ -5,7 +5,7 @@
 const CONFIG = {
   companyName: "Transportes SE",
   nit: "[AGREGAR NIT]",
-  whatsapp: "573143868847", // Reemplazar por número real: código país + número, sin + ni espacios.
+  whatsapp: "573054521680", // Reemplazar por número real: código país + número, sin + ni espacios.
   phone: "[AGREGAR TELÉFONO]",
   email: "[AGREGAR CORREO]",
   address: "[AGREGAR DIRECCIÓN REAL]",
@@ -142,34 +142,32 @@ const ABOUT = {
     ]
   },
   mision: {
-    index: "02 — NUESTRA MISIÓN", title: "Mover personas con propósito.",
+    index: "02 — NUESTRA MISIÓN", title: "Cada viaje, un compromiso con usted",
     paragraphs: [
-      "Brindar un servicio de transporte de pasajeros seguro, cómodo y confiable, comprometidos con la satisfacción de nuestros clientes y el bienestar de quienes confían en nosotros. ",
-      "Trabajamos con responsabilidad, calidad humana y dedicación, buscando mejorar continuamente nuestros servicios y contribuir al desarrollo del transporte en los Llanos Orientales y en Colombia."
+      "Ofrecer soluciones de transporte de pasajeros que respondan a las necesidades de cada cliente, a través de un servicio responsable, puntual y cercano. ",
+      "Nos esforzamos por brindar una atención cálida y personalizada, construyendo relaciones duraderas con quienes nos eligen y contribuyendo al desarrollo de la movilidad en los Llanos Orientales y en Colombia."
     ]
   },
   vision: {
-    index: "03 — NUESTRA VISIÓN", title: "Crecer conectando a Colombia.",
+    index: "03 — NUESTRA VISIÓN", title: "Llegar más lejos, creciendo junto a nuestros clientes.",
     paragraphs: [
-      "Proyectamos un crecimiento sostenible, fortaleciendo nuestra flota vehicular e incorporando nuevas tecnologías para llegar cada vez más lejos y ofrecer mejores experiencias de viaje ",
-      "Consolidarnos en el 2030 como una empresa llanera reconocida en el sector del transporte de pasajeros por la calidad de nuestros servicios, la confianza de nuestros clientes y el compromiso de nuestro equipo humano. "
+      "Para el año 2030, ser una empresa llanera reconocida por su servicio de transporte puerta a puerta, destacándonos por la atención personalizada, el cumplimiento y la dedicación en cada recorrido.",
+      "Aspiramos a crecer de manera sostenible, ampliar nuestras oportunidades de servicio y fortalecer nuestra operación, manteniendo siempre la esencia que nos caracteriza: estar cerca de las personas y acompañarlas en cada destino."
     ]
   },
   objetivos: {
-    index: "04 — NUESTROS OBJETIVOS", title: "Compromisos que guían cada recorrido.",
+    index: "04 — NUESTROS OBJETIVOS", title: "Crecer con compromiso, avanzar con responsabilidad.",
     objectives: [
 
-      " Ofrecer una atención amable, oportuna y personalizada, garantizando experiencias satisfactorias para nuestros pasajeros.",
+      " Brindar un trato amable y oportuno, atendiendo las necesidades de cada pasajero y procurando una experiencia agradable durante su viaje.",
 
-      "Promover condiciones de transporte seguras, responsables y confiables en cada recorrido.",
+      " Cumplir con los compromisos adquiridos, promoviendo una operación responsable y un servicio que responda a las expectativas de nuestros clientes.",
 
-      "Ampliar progresivamente nuestra flota vehicular y nuestra capacidad operativa para llegar a nuevos destinos.",
+      " Fortalecer progresivamente nuestra capacidad operativa y ampliar nuestra cobertura hacia nuevos destinos, de acuerdo con las necesidades de nuestros pasajeros.",
 
-      "Mejoramiento continuo: Incorporar herramientas tecnológicas, fortalecer nuestros procesos y mantener nuestros vehículos en óptimas condiciones.",
+      " Optimizar nuestros procesos, incorporar herramientas tecnológicas y velar por el adecuado mantenimiento de nuestros vehículos.",
 
-      "Construir relaciones basadas en el respeto, la honestidad y la responsabilidad con nuestros pasajeros, colaboradores y aliados.",
-
-      "Sostenibilidad: Desarrollar una empresa sólida y sostenible, comprometida con el crecimiento económico, social y ambiental de nuestra región."
+      " Fomentar vínculos basados en el respeto, la honestidad y la responsabilidad con nuestros pasajeros, colaboradores y aliados.",
       
     
     ]
