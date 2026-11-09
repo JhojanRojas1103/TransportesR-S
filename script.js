@@ -5,7 +5,7 @@
 const CONFIG = {
   companyName: "Transportes SE",
   nit: "[AGREGAR NIT]",
-  whatsapp: "573054521680", // Reemplazar por número real: código país + número, sin + ni espacios.
+  whatsapp: "573143868847", // Reemplazar por número real: código país + número, sin + ni espacios.
   phone: "[AGREGAR TELÉFONO]",
   email: "[AGREGAR CORREO]",
   address: "[AGREGAR DIRECCIÓN REAL]",
@@ -186,7 +186,7 @@ const $ = (selector, parent=document) => parent.querySelector(selector);
 const $$ = (selector, parent=document) => [...parent.querySelectorAll(selector)];
 const whatsappUrl = (message) => `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(message)}`;
 function openWhatsApp(message) {
-  if (!CONFIG.whatsapp || CONFIG.whatsapp === "573000000000" || CONFIG.whatsapp.includes("[")) {
+  if (!CONFIG.whatsapp || CONFIG.whatsapp === "57314 3868847" || CONFIG.whatsapp.includes("[")) {
     alert("Antes de usar WhatsApp, configura el número real en CONFIG.whatsapp dentro de script.js.");
     return;
   }
