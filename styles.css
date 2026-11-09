@@ -109,7 +109,7 @@
    .welcome-bg,.welcome-shade{position:absolute;inset:0}.welcome-bg {
     position: absolute;
     inset: 0;
-    background-image: url('https://xatimg.com/image/8HDjnX9RxARq.png');
+    background-image: url('https://xatimg.com/image/OrGHQv0upHse.png');
     background-repeat: no-repeat;
     background-position: center center;
 
@@ -121,7 +121,7 @@
     animation: none;
 
     /* Fondo para los espacios sobrantes */
-    background-color: #071b35;
+    background-color: #757677;
       }
 .welcome-shade{background:linear-gradient(115deg,rgba(4,20,40,.88),rgba(5,36,65,.55),rgba(4,17,34,.65))}
 
