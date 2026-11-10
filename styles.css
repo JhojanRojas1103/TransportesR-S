@@ -96,45 +96,71 @@
          .btn-outline{border-color:#b7cbdc;color:var(--navy);background:transparent}
          
          .btn-outline:hover{border-color:var(--blue);background:var(--pale)}
-/* WELCOME */
-.welcome-screen{
-   position:fixed;
-   inset:0;z-index:1000;
-   display:grid;place-items:center;
-   color:#fff;overflow:hidden;
-   transition:opacity .85s ease,visibility .85s}
-   
-   .welcome-screen.is-hidden{opacity:0;visibility:hidden;pointer-events:none}
-   
-   .welcome-bg,.welcome-shade{position:absolute;inset:0}.welcome-bg {
-    position: absolute;
-    inset: 0;
-    background-image: url('https://xatimg.com/image/Mm0gPO2dq8cv.jpg');
-    background-repeat: no-repeat;
-    background-position: center center;
-
-    /* Mostrar la imagen COMPLETA */
-    background-size: contain;
-
-    /* Eliminar ampliaciones */
-    transform: none;
-    animation: none;
-
-    /* Fondo para los espacios sobrantes */
-    background-color: #757677;
-      }
 
 /* =========================================
-   PANTALLA DE BIENVENIDA TRANSPORTES S&E
+   PANTALLA DE BIENVENIDA - TRANSPORTES S&E
    ========================================= */
 
+.welcome-screen {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    z-index: 1000;
+    display: grid;
+    place-items: center;
+    color: #fff;
+    overflow: hidden;
+    background: #071b35;
+    transition: opacity .85s ease, visibility .85s ease;
+}
+
+.welcome-screen.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* IMAGEN DE FONDO: CUBRE TODA LA PANTALLA */
+.welcome-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://xatimg.com/image/Mm0gPO2dq8cv.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    /* CLAVE: OCUPAR TODA LA PANTALLA */
+    background-size: cover;
+
+    transform: none;
+    animation: none;
+}
+
+/* CAPA OSCURA */
+.welcome-shade {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(
+        115deg,
+        rgba(4,20,40,.65),
+        rgba(5,36,65,.30),
+        rgba(4,17,34,.55)
+    );
+}
+
+/* CONTENIDO CENTRAL */
 .welcome-content {
     position: relative;
     z-index: 2;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     text-align: center;
     padding: 20px;
     animation: rise 1s .2s both;
@@ -146,12 +172,13 @@
     font-size: clamp(13px, 2vw, 18px);
     font-weight: 700;
     letter-spacing: 6px;
-    color: #ffffff;
+    color: #fff;
     margin-bottom: 30px;
 }
 
 /* LOGOTIPO */
 .welcome-logo {
+    display: block;
     width: clamp(150px, 22vw, 260px);
     height: auto;
     max-height: 220px;
@@ -160,13 +187,13 @@
     filter: drop-shadow(0 5px 15px rgba(0,0,0,.3));
 }
 
-/* EMPRESA 100% LLANERA */
+/* TEXTO EMPRESARIAL */
 .welcome-company {
     font-family: var(--display);
     font-size: clamp(20px, 3vw, 34px);
     font-weight: 700;
     letter-spacing: 3px;
-    color: #ffffff;
+    color: #fff;
     margin: 0;
 }
 
@@ -177,9 +204,10 @@
 /* TEXTO INFERIOR */
 .welcome-bottom {
     position: absolute;
-    bottom: 35px;
-    left: 0;
-    right: 0;
+    z-index: 2;
+    bottom: clamp(20px, 5vh, 45px);
+    left: 10px;
+    right: 10px;
     text-align: center;
     font-size: 10px;
     font-weight: 700;
@@ -187,10 +215,34 @@
     color: #d1e8fa;
 }
 
-/* RESPONSIVE */
-@media (max-width: 599px) {
+/* ANIMACIÓN */
+@keyframes rise {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* TABLETS */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .welcome-bg {
+        background-position: center center;
+    }
+}
+
+/* CELULARES */
+@media (max-width: 600px) {
+    .welcome-bg {
+        background-position: center center;
+        background-size: cover;
+    }
 
     .welcome-kicker {
+        font-size: 13px;
         letter-spacing: 3px;
         margin-bottom: 25px;
     }
@@ -212,220 +264,7 @@
         bottom: 25px;
     }
 }
-/* CENTRAR LOGOTIPO EN LA PANTALLA DE BIENVENIDA */
-.welcome-content {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
 
-.welcome-logo {
-    display: block;
-    width: clamp(150px, 22vw, 260px);
-    height: auto;
-    max-height: 220px;
-    object-fit: contain;
-    margin: 0 auto 28px;
-    align-self: center;
-}
-
-/* PANTALLA RESPONSIVE */
-.welcome-screen {
-    position: fixed;
-    inset: 0;
-    width: 100%;
-    height: 100vh;
-    height: 100dvh;
-    overflow: hidden;
-}
-
-/* CONTENIDO CENTRAL */
-.welcome-content {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-    z-index: 2;
-}
-/* PANTALLA RESPONSIVE */
-.welcome-screen {
-    position: fixed;
-    inset: 0;
-    width: 100%;
-    height: 100vh;
-    height: 100dvh;
-    overflow: hidden;
-}
-
-/* CONTENIDO CENTRAL */
-.welcome-content {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-    z-index: 2;
-}
-
-/* LOGOTIPO RESPONSIVE */
-.welcome-logo {
-    width: clamp(140px, 22vw, 260px);
-    max-height: 25vh;
-    height: auto;
-    object-fit: contain;
-}
-
-/* TEXTO INFERIOR */
-.welcome-bottom {
-    position: absolute;
-    bottom: clamp(20px, 5vh, 45px);
-    left: 10px;
-    right: 10px;
-    text-align: center;
-    z-index: 2;
-}
-
-/* CELULARES */
-@media (max-width: 600px) {
-    .welcome-logo {
-        width: 170px;
-        max-height: 20vh;
-    }
-
-    .welcome-content {
-        padding: 15px;
-    }
-}
-
-/* TABLETS */
-@media (min-width: 601px) and (max-width: 1024px) {
-    .welcome-logo {
-        width: 210px;
-    }
-}
-
-/* LOGOTIPO RESPONSIVE */
-.welcome-logo {
-    width: clamp(140px, 22vw, 260px);
-    max-height: 25vh;
-    height: auto;
-    object-fit: contain;
-}
-
-/* TEXTO INFERIOR */
-.welcome-bottom {
-    position: absolute;
-    bottom: clamp(20px, 5vh, 45px);
-    left: 10px;
-    right: 10px;
-    text-align: center;
-    z-index: 2;
-}
-
-.welcome-shade{background:linear-gradient(115deg,rgba(4,20,40,.88),rgba(5,36,65,.55),rgba(4,17,34,.65))}
-
-.welcome-content{position:relative;text-align:center;animation:rise .9s .2s both}
-
-.welcome-kicker{font-size:10px;letter-spacing:4px;color:#b6dcf5}
-
-.welcome-content h1{font-size:clamp(48px,9vw,100px);letter-spacing:3px;margin:20px 0 25px}
-
-.brand-mark{display:flex;align-items:center;gap:12px}
-
-.brand-mark-large{justify-content:center}
-
-.brand-symbol{
-   
-   display:grid;
-   place-items:center;
-   width:43px;height:43px;
-   border:1px solid #70b9ed;
-   color:#83cafa;
-   font-family:var(--display);
-   font-weight:800;font-size:15px;
-   letter-spacing:-1px;
-   transform:skew(-7deg)}
-   
-   .brand-name{font-family:var(--display);
-      font-size:16px;
-      letter-spacing:2px;
-      line-height:1.2}
-      
-   .brand-name b{color:#77c3f4}
-   
-   .brand-name small{
-      display:block;
-      font:700 8px var(--font);
-      letter-spacing:2.5px
-      ;margin-top:5px;
-      color:#8da8bf}
-      
-   .welcome-content>p{
-      font-size:13px;
-      color:#d4e3ef;
-      letter-spacing:1px;
-      margin:25px 0}
-      
-      .welcome-enter{
-         border:1px solid #ffffff80;
-         background:#ffffff12;
-         color:white;padding:13px 22px;
-         font-size:11px;letter-spacing:1px}
-         
-      .welcome-enter span{
-         margin-left:18px;
-         font-size:17px}
-         
-      .welcome-enter:hover{background:#fff;
-         color:var(--navy)}
-         
-      .welcome-bottom{position:absolute;
-         bottom:28px;font-size:9px;
-         letter-spacing:3px;color:#a9c7df}
-         
-         @keyframes rise{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:none}}
-         
-         @media (min-width: 600px) and (max-width: 1023px) {
-    
-            .welcome-bg {
-        background-size: contain;
-    }
-
-    .welcome-content h1 {
-        font-size: clamp(42px, 7vw, 75px);
-    }
-}
-
-/* CELULARES */
-@media (max-width: 599px) {
-    .welcome-bg {
-        background-size: contain;
-    }
-
-    .welcome-content h1 {
-        font-size: clamp(35px, 10vw, 55px);
-        letter-spacing: 1px;
-    }
-
-    .welcome-content {
-        padding: 15px;
-    }
-
-    .welcome-bottom {
-        font-size: 8px;
-        letter-spacing: 1.5px;
-    }
-}
 /* HEADER */
 .brand-logo {
     width: 55px;
