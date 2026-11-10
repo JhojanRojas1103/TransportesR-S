@@ -927,6 +927,42 @@
 
 
 /* RESPONSIVE */
-@media(max-width:980px){.main-nav{gap:19px}.nav-link{font-size:10px}.section{padding:85px 0}.fleet-grid{grid-template-columns:repeat(2,1fr)}.service-grid{grid-template-columns:repeat(2,1fr)}.service-card:last-child{grid-column:span 2}.footer-main{grid-template-columns:1.3fr 1fr 1fr;gap:30px}.footer-column:last-child{grid-column:2 / 4}.contact-layout{gap:35px}}
-@media(max-width:720px){.container{width:min(100% - 36px,560px)}.site-header{height:70px;padding:0 18px}.menu-toggle{display:flex;flex-direction:column;gap:5px;border:0;background:none;padding:10px}.menu-toggle span{width:23px;height:2px;background:var(--navy);transition:.2s}.main-nav{position:absolute;top:70px;left:0;right:0;background:white;display:flex;flex-direction:column;align-items:stretch;gap:0;padding:8px 20px 20px;box-shadow:0 15px 25px #071b3515;opacity:0;visibility:hidden;transform:translateY(-8px);transition:.25s}.main-nav.open{opacity:1;visibility:visible;transform:none}.nav-link{padding:14px 4px;font-size:12px}.nav-link:after{display:none}.nav-contact{text-align:center;margin-top:8px}.hero-section{height:690px;min-height:600px}.hero-image{background-position:60% center}.hero-overlay{background:linear-gradient(90deg,#04172fe8,#061c36a8 75%,#061c3640)}.hero-content h1{font-size:clamp(44px,11vw,64px);letter-spacing:-2.8px}.hero-copy{font-size:12px;max-width:440px}.hero-trust{font-size:8px;gap:8px;flex-wrap:wrap;margin-top:35px}.scroll-cue{display:none}.section{padding:75px 0}.section-heading.centered{margin-bottom:38px}.section-heading>p,.about-top>p{font-size:13px}.destination-grid{grid-template-columns:1fr 1fr;grid-template-rows:300px 230px 230px}.destination-card.tall{grid-row:span 1;grid-column:span 2}.destination-info{padding:19px}.destination-info h3{font-size:24px}.destination-info p{font-size:10px}.destination-cta{padding:27px;align-items:flex-start;flex-direction:column}.destination-cta h3{font-size:22px}.about-top,.fleet-heading{display:block}.about-top>p,.fleet-heading>p{margin-top:18px}.about-layout{grid-template-columns:1fr}.about-photo{min-height:310px}.about-panel{padding:27px 22px;min-height:430px}.tab-list{gap:18px}.about-tab{font-size:10px}.tab-content h3{font-size:23px}.service-grid{grid-template-columns:1fr}.service-card:last-child{grid-column:auto}.service-image{height:230px}.service-body>p{min-height:0}.fleet-grid{grid-template-columns:1fr 1fr;gap:12px}.vehicle-image{height:145px}.vehicle-info{padding:15px}.vehicle-info h3{font-size:22px}.contact-layout{grid-template-columns:1fr;gap:35px}.quote-form{padding:28px 20px}.footer-main{grid-template-columns:1fr 1fr;gap:30px}.footer-brand{grid-column:span 2}.footer-column:last-child{grid-column:auto}.footer-bottom{align-items:flex-start;flex-direction:column}.legal-links{flex-wrap:wrap}.whatsapp-widget{left:14px;bottom:14px}.whatsapp-button{padding:11px 14px}.whatsapp-widget .wa-label{display:none}.chat-panel{width:min(310px,calc(100vw - 28px))}.vehicle-modal{grid-template-columns:1fr;max-height:90vh;overflow:auto}.modal-image{min-height:190px}.modal-copy{padding:27px 24px}.modal-copy h2{font-size:29px}.modal-specs{margin-bottom:18px}}
+@media(max-width:980px){.main-nav{gap:19px}.nav-link{font-size:10px}
+.section{padding:85px 0}.fleet-grid{grid-template-columns:repeat(2,1fr)}.service-grid{grid-template-columns:repeat(2,1fr)}.service-card:last-child{grid-column:span 2}.footer-main{grid-template-columns:1.3fr 1fr 1fr;gap:30px}.footer-column:last-child{grid-column:2 / 4}.contact-layout{gap:35px}}
+@media(max-width:720px){
+.container{width:min(100% - 36px,560px)}
+.site-header{height:70px;padding:0 18px}
+.menu-toggle{display:flex;flex-direction:column;gap:5px;border:0;background:none;padding:10px}
+.menu-toggle span{width:23px;height:2px;background:var(--navy);transition:.2s}
+.main-nav{position:absolute;top:70px;left:0;right:0;background:white;display:flex;flex-direction:column;align-items:stretch;gap:0;padding:8px 20px 20px;box-shadow:0 15px 25px #071b3515;opacity:0;visibility:hidden;transform:translateY(-8px);transition:.25s}.main-nav.open{opacity:1;visibility:visible;transform:none}.nav-link{padding:14px 4px;font-size:12px}.nav-link:after{display:none}.nav-contact{text-align:center;margin-top:8px}.hero-section{height:690px;min-height:600px}.hero-image{background-position:60% center}.hero-overlay{background:linear-gradient(90deg,#04172fe8,#061c36a8 75%,#061c3640)}.hero-content h1{font-size:clamp(44px,11vw,64px);letter-spacing:-2.8px}.hero-copy{font-size:12px;max-width:440px}.hero-trust{font-size:8px;gap:8px;flex-wrap:wrap;margin-top:35px}.scroll-cue{display:none}.section{padding:75px 0}.section-heading.centered{margin-bottom:38px}.section-heading>p,.about-top>p{font-size:13px}.destination-grid{grid-template-columns:1fr 1fr;grid-template-rows:300px 230px 230px}.destination-card.tall{grid-row:span 1;grid-column:span 2}.destination-info{padding:19px}.destination-info h3{font-size:24px}.destination-info p{font-size:10px}.destination-cta{padding:27px;align-items:flex-start;flex-direction:column}.destination-cta h3{font-size:22px}.about-top,.fleet-heading{display:block}.about-top>p,.fleet-heading>p{margin-top:18px}.about-layout{grid-template-columns:1fr}.about-photo{min-height:310px}.about-panel{padding:27px 22px;min-height:430px}.tab-list{gap:18px}.about-tab{font-size:10px}.tab-content h3{font-size:23px}.service-grid{grid-template-columns:1fr}.service-card:last-child{grid-column:auto}.service-image{height:230px}.service-body>p{min-height:0}.fleet-grid{grid-template-columns:1fr 1fr;gap:12px}.vehicle-image{height:145px}.vehicle-info{padding:15px}.vehicle-info h3{font-size:22px}.contact-layout{grid-template-columns:1fr;gap:35px}.quote-form{padding:28px 20px}.footer-main{grid-template-columns:1fr 1fr;gap:30px}.footer-brand{grid-column:span 2}.footer-column:last-child{grid-column:auto}.footer-bottom{align-items:flex-start;flex-direction:column}.legal-links{flex-wrap:wrap}
+
+.whatsapp-button{padding:11px 14px}.whatsapp-widget .wa-label{display:none}.chat-panel{width:min(310px,calc(100vw - 28px))}.vehicle-modal{grid-template-columns:1fr;max-height:90vh;overflow:auto}.modal-image{min-height:190px}.modal-copy{padding:27px 24px}.modal-copy h2{font-size:29px}.modal-specs{margin-bottom:18px}}
 @media(max-width:420px){.form-row{grid-template-columns:1fr;gap:0}.destination-grid{grid-template-rows:270px 220px 220px}.fleet-grid{grid-template-columns:1fr}.vehicle-image{height:210px}.hero-actions .btn{width:100%}.hero-content h1{font-size:43px}.footer-main{grid-template-columns:1fr}.footer-brand{grid-column:auto}}
+
+/* =====================================
+   WHATSAPP — POSICIÓN DEFINITIVA
+   ===================================== */
+
+.whatsapp-widget {
+    position: fixed !important;
+    right: 14px !important;
+    left: auto !important;
+    bottom: 14px !important;
+    z-index: 150;
+}
+
+/* Tamaño del icono */
+.whatsapp-widget .wa-icon {
+    font-size: 17px;
+}
+
+/* Tamaño del botón */
+.whatsapp-widget .whatsapp-button {
+    padding: 9px 11px;
+}
+
+/* Panel de conversación alineado a la derecha */
+.whatsapp-widget .chat-panel {
+    left: auto;
+    right: 0;
+}
