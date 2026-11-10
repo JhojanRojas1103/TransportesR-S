@@ -133,7 +133,8 @@
     background-repeat: no-repeat;
 
     /* CLAVE: OCUPAR TODA LA PANTALLA */
-    background-size: cover;
+    background-size: contain;
+background-color: #071b35;
 
     transform: none;
     animation: none;
