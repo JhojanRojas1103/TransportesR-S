@@ -263,25 +263,6 @@
     text-align: center;
     z-index: 2;
 }
-
-/* CELULARES */
-@media (max-width: 600px) {
-    .welcome-logo {
-        width: 170px;
-        max-height: 20vh;
-    }
-
-    .welcome-content {
-        padding: 15px;
-    }
-}
-
-/* TABLETS */
-@media (min-width: 601px) and (max-width: 1024px) {
-    .welcome-logo {
-        width: 210px;
-    }
-}
       /* CENTRAR LOGOTIPO EN LA PANTALLA DE BIENVENIDA */
 .welcome-content {
     width: 100%;
