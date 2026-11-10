@@ -818,7 +818,8 @@
 
 .whatsapp-button:hover{background:#128b58;transform:translateY(-2px)}@keyframes pulse{0%,100%{box-shadow:0 8px 25px #092d2a44}50%{box-shadow:0 8px 25px #19a96b66,0 0 0 8px #19a96b18}}
 
-.chat-panel{position:absolute;left:0;bottom:65px;width:310px;background:#f4f7f8;box-shadow:0 15px 50px #071b3533;opacity:0;visibility:hidden;transform:translateY(10px);transition:.25s}
+.chat-panel{position:absolute;border-radius: 18px;
+    overflow: hidden;left:0;bottom:65px;width:310px;background:#f4f7f8;box-shadow:0 15px 50px #071b3533;opacity:0;visibility:hidden;transform:translateY(10px);transition:.25s}
 
 .chat-panel.open{opacity:1;visibility:visible;transform:none}
 
