@@ -141,15 +141,10 @@
 
 /* CAPA OSCURA */
 .welcome-shade {
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    background: linear-gradient(
-        115deg,
-        rgba(4,20,40,.65),
-        rgba(5,36,65,.30),
-        rgba(4,17,34,.55)
-    );
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: rgba(4, 20, 40, 0.20);
 }
 
 /* CONTENIDO CENTRAL */
