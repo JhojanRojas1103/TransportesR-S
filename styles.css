@@ -752,11 +752,47 @@
 
 
 /* WHATSAPP */
-.whatsapp-widget{position:fixed;left:24px;bottom:24px;z-index:150}
+.whatsapp-widget{
+    position:fixed;
+    right:24px;
+    bottom:24px;
+    left:auto;
+    z-index:150;
+}
 
-.whatsapp-button{display:flex;align-items:center;gap:10px;border:0;border-radius:40px;background:#19a96b;color:#fff;padding:12px 17px 12px 13px;box-shadow:0 8px 25px #092d2a44;animation:pulse 2.8s infinite}
+/* BOTÓN WHATSAPP MÁS PEQUEÑO */
+.whatsapp-button{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:7px;
+    border:0;
+    border-radius:40px;
+    background:#19a96b;
+    color:#fff;
+    padding:9px 12px;
+    box-shadow:0 8px 20px #092d2a44;
+    animation:pulse 2.8s infinite;
+}
 
-.wa-icon{font-size:23px;line-height:1}.wa-label{font-size:10px;font-weight:700}
+/* ICONO */
+.wa-icon{
+    font-size:18px;
+    line-height:1;
+}
+
+/* TEXTO */
+.wa-label{
+    font-size:9px;
+    font-weight:700;
+}
+.wa-icon{
+   font-size:23px;
+   line-height:1}
+   
+   .wa-label{
+      font-size:10px;
+      font-weight:700}
 
 .whatsapp-button:hover{background:#128b58;transform:translateY(-2px)}@keyframes pulse{0%,100%{box-shadow:0 8px 25px #092d2a44}50%{box-shadow:0 8px 25px #19a96b66,0 0 0 8px #19a96b18}}
 
@@ -780,6 +816,61 @@
 
 .chat-option:hover{background:#e5f5ed}.chat-option b{font-size:15px}
 
+/* =====================================
+   WHATSAPP: APARECER Y DESAPARECER
+   ===================================== */
+
+.whatsapp-widget {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 150;
+
+    animation: whatsappVisibility 13s infinite;
+}
+
+/* Animación de aparición y desaparición */
+@keyframes whatsappVisibility {
+
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(15px);
+    }
+
+    8% {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    38% {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    46% {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(15px);
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(15px);
+    }
+}
+
+/* Celulares */
+@media (max-width: 720px) {
+    .whatsapp-widget {
+        right: 14px;
+        left: auto;
+        bottom: 14px;
+    }
+}
 
 /* MODAL */
 .modal-backdrop{
