@@ -106,23 +106,24 @@
    
    .welcome-screen.is-hidden{opacity:0;visibility:hidden;pointer-events:none}
    
-   .welcome-bg,.welcome-shade{position:absolute;inset:0}
-
-   .welcome-bg {
-    .welcome-bg {
+   .welcome-bg,.welcome-shade{position:absolute;inset:0}.welcome-bg {
     position: absolute;
     inset: 0;
     background-image: url('https://xatimg.com/image/oMhBYyGRs5mj.jpg');
     background-repeat: no-repeat;
     background-position: center center;
+
+    /* Mostrar la imagen COMPLETA */
     background-size: contain;
+
+    /* Eliminar ampliaciones */
     transform: none;
     animation: none;
-    background-color: #757677;
 
-    /* Opacidad de la imagen */
-    opacity: 0.55;
-}
+    /* Fondo para los espacios sobrantes */
+    background-color: #757677;
+    
+      }
 
 /* =========================================
    PANTALLA DE BIENVENIDA TRANSPORTES S&E
