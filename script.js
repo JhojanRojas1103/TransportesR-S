@@ -193,14 +193,27 @@ function openWhatsApp(message) {
   window.open(whatsappUrl(message), "_blank", "noopener,noreferrer");
 }
 
-// PANTALLA DE BIENVENIDA
+
+// =========================================
+// PANTALLA DE BIENVENIDA AUTOMÁTICA
+// =========================================
+
 const welcome = $("#welcomeScreen");
+
+// TIEMPO DE DURACIÓN DE LA PRESENTACIÓN
+const WELCOME_DURATION = 8000; // 8 segundos
+
 function enterSite() {
-  welcome.classList.add("is-hidden");
-  sessionStorage.setItem("rutasWelcomeSeen", "yes");
+    if (!welcome) return;
+
+    welcome.classList.add("is-hidden");
 }
-if (sessionStorage.getItem("rutasWelcomeSeen") === "yes") welcome.classList.add("is-hidden");
-$("#enterSite").addEventListener("click", enterSite);
+
+// Desaparecer automáticamente
+if (welcome) {
+    setTimeout(enterSite, WELCOME_DURATION);
+}
+
 
 // HEADER: menú móvil y navegación.
 const menuToggle = $("#menuToggle"), mainNav = $("#mainNav");
