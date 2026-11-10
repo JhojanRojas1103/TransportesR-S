@@ -123,21 +123,24 @@
 }
 
 /* IMAGEN DE FONDO: CUBRE TODA LA PANTALLA */
+/* Imagen de bienvenida */
 .welcome-bg {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('https://xatimg.com/image/Mm0gPO2dq8cv.jpg');
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://xatimg.com/image/Mm0gPO2dq8cv.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* Adaptación para celulares */
+@media (max-width: 600px) {
+  .welcome-bg {
+    background-size: cover;
     background-position: center center;
-    background-repeat: no-repeat;
-
-    /* CLAVE: OCUPAR TODA LA PANTALLA */
-    background-size: contain;
-background-color: #071b35;
-
-    transform: none;
-    animation: none;
+  }
 }
 
 /* CAPA OSCURA */
