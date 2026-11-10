@@ -254,6 +254,28 @@
     padding: 20px;
     z-index: 2;
 }
+/* PANTALLA RESPONSIVE */
+.welcome-screen {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    overflow: hidden;
+}
+
+/* CONTENIDO CENTRAL */
+.welcome-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    z-index: 2;
+}
 
 /* LOGOTIPO RESPONSIVE */
 .welcome-logo {
@@ -291,6 +313,25 @@
         width: 210px;
     }
 }
+
+/* LOGOTIPO RESPONSIVE */
+.welcome-logo {
+    width: clamp(140px, 22vw, 260px);
+    max-height: 25vh;
+    height: auto;
+    object-fit: contain;
+}
+
+/* TEXTO INFERIOR */
+.welcome-bottom {
+    position: absolute;
+    bottom: clamp(20px, 5vh, 45px);
+    left: 10px;
+    right: 10px;
+    text-align: center;
+    z-index: 2;
+}
+
 .welcome-shade{background:linear-gradient(115deg,rgba(4,20,40,.88),rgba(5,36,65,.55),rgba(4,17,34,.65))}
 
 .welcome-content{position:relative;text-align:center;animation:rise .9s .2s both}
