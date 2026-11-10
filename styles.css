@@ -292,7 +292,12 @@
     align-self: center;
 }
 
-.welcome-shade{background:linear-gradient(115deg,rgba(4,20,40,.88),rgba(5,36,65,.55),rgba(4,17,34,.65))}
+.welcome-shade {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.60);
+}
 
 .welcome-content{position:relative;text-align:center;animation:rise .9s .2s both}
 
