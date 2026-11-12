@@ -47,16 +47,16 @@ const heroTwo = document.querySelector(".hero-image-two");
 
 const heroSlides = [
   {
-    desktop: "Imagenes/CarruselFotosPC1.jpg",
-    mobile: "Imagenes/CarruselFotosCEL2.jpg"
+    desktop: "imagenes/carruselfotospc1.jpg",
+    mobile: "imagenes/carruselfotoscel2.jpg"
   },
   {
-    desktop: "Imagenes/CarruselFotosPC3.jpg",
-    mobile: "Imagenes/CarruselFotosCEL4.jpg"
+    desktop: "imagenes/carruselfotospc3.jpg",
+    mobile: "imagenes/carruselfotoscel4.jpg"
   },
   {
-    desktop: "Imagenes/CarruselFotosPC5.jpg",
-    mobile: "Imagenes/CarruselFotosCEL6.jpg"
+    desktop: "imagenes/carruselfotospc5.jpg",
+    mobile: "imagenes/carruselfotoscel6.jpg"
   }
 ];
 
