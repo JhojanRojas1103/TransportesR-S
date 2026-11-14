@@ -31,9 +31,9 @@ const CONFIG = {
 
   // Agregar únicamente redes sociales oficiales.
   socials: {
-    facebook: "",
+    facebook: "https://www.facebook.com/profile.php?id=61596462184725",
     instagram: "https://www.instagram.com/sebastian_puerta_puerta_?exln=dXZhbXExdDByMTgy",
-    tiktok: ""
+    tiktok: "https://www.tiktok.com/@transportes_sye"
   }
 };
 
